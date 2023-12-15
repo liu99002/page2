@@ -1,8 +1,6 @@
 
 import { Application } from "https://deno.land/x/oak/mod.ts";
-
 const app = new Application();
-
 app.use((ctx) => {
   let pathname=ctx.request.url.pathname
   ctx.response.body=`
@@ -33,6 +31,5 @@ app.use((ctx) => {
     ctx.response.redirect("https://csie.nqu.edu.tw/")
   }
 });
-
 console.log('start at : http://127.0.0.1:8000')
 await app.listen({ port: 8000 });
