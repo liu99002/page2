@@ -1,0 +1,36 @@
+<html>
+<head>
+<link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+  <div id="head">
+    <div id="headLeft"><a href="#home" class="logo">DenoGPT</a></div>
+    <div id="headCenter"></div>
+    <div id="headRight"></div>
+  </div>
+  <div>
+    <div id="main">
+      <form onsubmit="return false">
+        <div>
+          <input type="text" id="question" class="long" placeholder="想要問 ChatGPT 的問題"/>
+          <button onclick="serverChat()">送出</button>
+        </div>
+      </form>
+      <!-- table -->
+      <table id="questionTable">
+      <tr><th style="width:12em">時間</th><th>問題</th><th style="width:5em">回應狀態</th></tr>
+      </table>
+      <!-- popup -->
+      <div id="popupBox" class="popupBox" style="display:none">
+          <button onclick="viewClose()" class="dark" style="float:right">關閉</button>
+          <select>
+              <option value="plaintext">PlainText</option>
+              <option value="markdown">Markdown</option>
+          </select>
+          <pre id="viewBox" style="height:90%;overflow:auto;"></pre>
+      </div>    
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

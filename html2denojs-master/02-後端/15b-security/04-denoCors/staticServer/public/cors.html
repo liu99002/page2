@@ -1,0 +1,19 @@
+<script>
+async function fetchCors(url) {
+    try {
+        let r = await window.fetch(url, {
+            method: 'GET',
+            headers: {
+            'Content-Type': 'application/json'
+            }
+        })    
+        let text =  await r.text()
+        console.log(`${url} => ${text}`)
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+fetchCors('http://127.0.0.1:8001/book/1')
+fetchCors('http://127.0.0.1:8001/book')
+</script>

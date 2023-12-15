@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login and Register</title>
+</head>
+<body>
+  <h1>Register</h1>
+  <form id="registerForm">
+    <label for="registerUsername">Username:</label>
+    <input type="text" id="registerUsername" name="username" required><br><br>
+    <label for="registerPassword">Password:</label>
+    <input type="password" id="registerPassword" name="password" required><br><br>
+    <button type="submit">Register</button>
+  </form>
+
+  <h1>Login</h1>
+  <form id="loginForm">
+    <label for="loginUsername">Username:</label>
+    <input type="text" id="loginUsername" name="username" required><br><br>
+    <label for="loginPassword">Password:</label>
+    <input type="password" id="loginPassword" name="password" required><br><br>
+    <button type="submit">Login</button>
+  </form>
+
+  <div id="message"></div>
+
+  <script>
+    const registerForm = document.getElementById("registerForm");
+    const loginForm = document.getElementById("loginForm");
+    const message = document.getElementById("message");
+
+    registerForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const username = registerForm.username.value;
+      const password = registerForm.password.value;
+
+      const response = await fetch("/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const data = await response.json();
+      message.textContent = data.message;
+    });
+
+    loginForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const username = loginForm.username.value;
+      const password = loginForm.password.value;
+
+      const response = await fetch("/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const data = await response.json();
+      message.textContent = data.message;
+    });
+  </script>
+</body>
+</html>

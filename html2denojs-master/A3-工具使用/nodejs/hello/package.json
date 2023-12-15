@@ -1,0 +1,14 @@
+{
+  "name": "hello",
+  "version": "0.0.1",
+  "description": "just hello test",
+  "main": "hello.js",
+  "scripts": {
+    "test": "node lodash_test.js"
+  },
+  "author": "ccc",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

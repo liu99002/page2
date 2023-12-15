@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My New Hugo Site</title>
+    <link>http://example.org/posts/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 May 2022 09:59:51 +0800</lastBuildDate><atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo上github</title>
+      <link>http://example.org/posts/hugo%E4%B8%8Agithub/</link>
+      <pubDate>Fri, 27 May 2022 09:59:51 +0800</pubDate>
+      
+      <guid>http://example.org/posts/hugo%E4%B8%8Agithub/</guid>
+      <description>設定 github pages 匯出靜態網站  60 hugo -D 63 cd public 64 file_server . 設定 github pages </description>
+    </item>
+    
+    <item>
+      <title>Hugo入門</title>
+      <link>http://example.org/posts/hugo%E5%85%A5%E9%96%80/</link>
+      <pubDate>Fri, 27 May 2022 09:55:03 +0800</pubDate>
+      
+      <guid>http://example.org/posts/hugo%E5%85%A5%E9%96%80/</guid>
+      <description>安裝 請到此處下載適合你電腦的 Hugo 版本安裝
+https://github.com/gohugoio/hugo/releases
+使用 &amp;ndash; 建立 quick-start 網站  https://gohugo.io/getting-started/quick-start/  $ hugo version $ hugo new site quickstart $ cd quickstart/ $ git init $ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke $ echo theme = \&amp;#34;ananke\&amp;#34; &amp;gt;&amp;gt; config.toml $ hugo new posts/my-first-post.md $ hugo server -D 然後就可以看到網站了，接著可繼續加
+$ hugo new posts/my-second-post.md // 然後用編輯器編輯 content/posts/my-second-post.md 網站會立即更新！
+匯出靜態網站  60 hugo -D 63 cd public 64 file_server . </description>
+    </item>
+    
+  </channel>
+</rss>

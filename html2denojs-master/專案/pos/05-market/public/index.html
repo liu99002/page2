@@ -1,0 +1,67 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="main.css"/>
+</head>
+<body onload="Ui.goto('#shop')">
+<header>
+  <div class="navbar" style="float:left">
+    <a onclick="Ui.openNav()" style="cursor:pointer">&#9776;</a>
+  </div>
+  <div class="navbar" style="float:right">
+    <div class="dropdown">
+      <button class="dropbtn">
+        <i class="fa fa-user"></i>
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#login">登入</a>
+        <a href="#logout">登出</a>
+        <a href="#signup">註冊</a>
+        <a href="#shop">我的商店</a>
+        <a href="#home">首頁</a>
+      </div>
+    </div>
+    <a href="#Shop" id="menuShopName">店名</a>
+  </div>
+</header>
+<aside>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="Ui.closeNav()">&times;</a>
+    <a href="#market">全部</a>
+    <a href="#market/eat">飲食</a>
+    <a href="#market/cloth">服裝</a>
+    <a href="#market/house">住宿</a>
+    <a href="#market/travel">旅行</a>
+    <a href="#market/sport">運動</a>
+    <a href="#market/enjoy">遊樂</a>
+    <a href="#market/pet">寵物</a>
+    <a href="#market/tutor">補教</a>
+    <a href="#market/care">照護</a>
+  </div>
+</aside>
+<main>
+  <div id="main" class="table" style="text-align:center">
+  </div>
+</main>
+
+<footer>
+</footer>
+<script src="Server.js"></script>
+<script src="DB.js"></script>
+<script src="Shop.js"></script>
+<script src="Pos.js"></script>
+<script src="Report.js"></script>
+<script src="Setting.js"></script>
+<script src="Lib.js"></script>
+<script src="Ui.js"></script>
+<script src="Login.js"></script>
+<script src="Logout.js"></script>
+<script src="Signup.js"></script>
+<script src="Home.js"></script>
+<script src="Main.js"></script>
+<script src="Market.js"></script>
+</body>
+</html>

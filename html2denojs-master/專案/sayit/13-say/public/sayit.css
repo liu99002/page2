@@ -1,0 +1,74 @@
+h1, h2, h3, h4, h5, h6, li, p {
+    color:#555555;
+}
+
+li {
+    list-style-type: none;
+}
+
+#say {
+    width:80%;
+    height: 2.5em;
+    padding: 5px 10px;
+    overflow-y: hidden;
+    border-color:#cccccc;
+}
+
+button {
+    border-radius:5px;
+    border-width:1px;
+    border-color:#888888;
+    background-color:#336699;
+    height: 2em;
+    padding: 0px 10px;
+    color: white;
+}
+
+.op {
+    font-size:16px;
+    float:right;
+}
+
+#main {
+    max-width:700px;
+    margin-top:30px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+* {
+    line-height:180%;
+}
+
+.time {
+    font-size:small;
+    color:#888888;
+}
+
+.user {
+    color:#000000;
+    font-style:normal;
+    text-transform: capitalize;
+}
+
+a {
+    color:#336699;
+    text-decoration: none;
+}
+
+form {
+    max-width:20em;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+select {
+    color: #888888;
+    border:0px;
+}
