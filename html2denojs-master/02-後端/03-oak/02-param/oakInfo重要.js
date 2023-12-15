@@ -18,6 +18,7 @@ app.use((ctx) => {
     searchParams.get('name')=${ctx.request.url.searchParams.get('name')}
     headers=${JSON.stringify(Object.fromEntries(ctx.request.headers))}
   `;
+  //response傳給伺服器
 });
 
 console.log('start at : http://127.0.0.1:8000')

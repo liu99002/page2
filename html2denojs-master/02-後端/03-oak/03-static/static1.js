@@ -9,6 +9,7 @@ app.use(async (ctx) => {
     root: Deno.cwd()+'/public/',
     index: "index.html",
   });
+  //index: 就算不打也會找index.html<<
 });
 
 console.log('start at : http://127.0.0.1:8000')

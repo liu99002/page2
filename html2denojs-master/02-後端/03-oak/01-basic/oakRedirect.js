@@ -3,7 +3,6 @@ import { Application } from "https://deno.land/x/oak/mod.ts";
 const app = new Application();
 
 app.use((ctx) => {
-  console.log('url=', ctx.request.url)
   ctx.response.redirect('https://tw.youtube.com')
 });
 
