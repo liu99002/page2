@@ -1,11 +1,11 @@
 import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 const rooms = new Map();
-rooms.set("319", {
-    "教室":"319",
+rooms.set("e319", {
+    "教室":"e319",
     "名稱":"嵌入式實驗室",
 });
-rooms.set("320", {
-    "教室":"320",
+rooms.set("e320", {
+    "教室":"e320",
     "名稱":"多媒體教室",
 });
 const router = new Router();
@@ -33,7 +33,7 @@ router
             </body>
         </html>`
     })
-    .get("/nqu/csie/:id", (context) => {
+    .get("/room/:id", (context) => {
         if (context.params && context.params.id && rooms.has(context.params.id)) {
           context.response.body = rooms.get(context.params.id);
         }
