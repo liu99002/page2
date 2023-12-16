@@ -1,4 +1,3 @@
-
 import { Application } from "https://deno.land/x/oak/mod.ts";
 const app = new Application();
 app.use((ctx) => {
@@ -8,7 +7,7 @@ app.use((ctx) => {
     <body>
     </body>
   </html>`
-  if (pathname=="/nqu"){
+  if (pathname=="/nqu/"){
     ctx.response.body=`
     <html>
         <body>
@@ -16,7 +15,7 @@ app.use((ctx) => {
         </body>
     </html>`
   }
-  if (pathname=="/nqu/csie"){
+  if (pathname=="/nqu/csie/"){
     ctx.response.body=`
     <html>
         <body>
@@ -24,10 +23,10 @@ app.use((ctx) => {
         </body>
     </html>`
   }
-  if (pathname=="/to/nqu"){
+  if (pathname=="/to/nqu/"){
     ctx.response.redirect("https://www.nqu.edu.tw/")
   }
-  if (pathname=="/to/nqu/csie"){
+  if (pathname=="/to/nqu/csie/"){
     ctx.response.redirect("https://csie.nqu.edu.tw/")
   }
 });
