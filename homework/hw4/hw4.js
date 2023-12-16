@@ -38,13 +38,19 @@ router
                 ctx.response.body =`
                     <p>Account=${account} 帳號已被別人使用過！</p>
                     <p><a href="/public/register.html">帳號註冊</a></p>
+                    <p><a href="/public/">首頁</a></p>
                 `
             }
             else {
                 accountpassword.set(account, {account, password})
                 console.log(accountpassword)
                 ctx.response.type = 'text/html'
-                ctx.response.body = `<p>註冊成功</p><p><a href="/public/login.html">帳號登入</a></p>`
+                ctx.response.body = `
+                    <p>註冊成功</p>
+                    <p><a href="/public/login.html">帳號登入</a></p>
+                    <p><a href="/public/register.html">繼續註冊</a></p>
+                    <p><a href="/public/">首頁</a></p>
+                `
             }
         } 
         
@@ -66,17 +72,30 @@ router
             console.log(accountpassword.get(accounts))
             const check=accountpassword.get(accounts)
             if (accountpassword.get(accounts)){
-                console.log("Ture")
-                if(accounts==check.account&&passwords==check.password)
-                ctx.response.type = 'text/html'
-                ctx.response.body =`
-                    <p>登入成功</p>
-                    <p>進入系統</p>
-                `
+                if(accounts==check.account&&passwords==check.password){
+                    ctx.response.type = 'text/html'
+                    ctx.response.body =`
+                        <p>登入成功</p>
+                        <p>進入系統</p>
+                        <p><a href="/public/">首頁</a></p>
+                    `
+                }
+                else {
+                    ctx.response.type = 'text/html'
+                    ctx.response.body = `
+                        <p>登入失敗，請檢查帳號密碼是否有錯！</p>
+                        <p><a href="/public/login.html">重新登入</a></p>
+                        <p><a href="/public/">首頁</a></p>
+                    `
+                }
             }
             else {
                 ctx.response.type = 'text/html'
-                ctx.response.body = `<p>登入失敗，請檢查帳號密碼是否有錯！</p><p><a href="/public/login.html">重新登入</a></p>`
+                ctx.response.body = `
+                    <p>登入失敗，請檢查帳號密碼是否有錯！</p>
+                    <p><a href="/public/login.html">重新登入</a></p>
+                    <p><a href="/public/">首頁</a></p>
+                `
             }
         } 
         
