@@ -95,7 +95,6 @@ export function newNumber() {
   </form>
   `)
 }
-
 export function show(number) {
   return layout(number.title, `
     <h1>${number.title}</h1>
