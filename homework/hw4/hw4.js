@@ -77,7 +77,7 @@ router
                     ctx.response.body =`
                         <p>登入成功</p>
                         <p>進入系統</p>
-                        <p><a href="/public/">首頁</a></p>
+                        <p><a href="/public/">登出</a></p>
                     `
                 }
                 else {

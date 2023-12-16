@@ -45,6 +45,7 @@ async function show(ctx) {
 
 async function create(ctx) {
   const body = ctx.request.body()
+  console.log(body)
   if (body.type === "form") {
     const pairs = await body.value
     const post = {}
