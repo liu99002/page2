@@ -22,23 +22,10 @@ form,h{
     font-family: "Lucida Handwriting",Cursive;
     font-style: italic;
   }    
-  #label1{
-    text-align: center;
-    font-family: "Copperplate",Fantasy;
-    font-style: italic;
-    font-weight: bold;
-    font-size: larger;
-  }
   body,h{
     background-repeat: no-repeat;
     background-position:center;
     background-size: cover;
-  }
-  #label2{
-    text-align: center;
-    font-family: "Copperplate",Fantasy;
-    font-style: italic;
-    font-weight: bold;
   }
   h1 ,h2{
     font-size: 2em;

@@ -17,7 +17,8 @@ db.query("CREATE TABLE IF NOT EXISTS posts (id INTEGER PRIMARY KEY AUTOINCREMENT
 
 const router = new Router();
 
-router.get('/', list)
+router
+  .get('/', list)
   .get('/post/new', add)
   .get('/post/:id', show)
   .post('/post', create)

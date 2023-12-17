@@ -15,8 +15,7 @@ const users = [
 ];
 
 for (const [user,pass] of users)
-  db.query("INSERT INTO users (user, pass) VALUES (?,?)", 
-           [user, pass]);
+  db.query("INSERT INTO users (user, pass) VALUES (?,?)", [user, pass]);
 
 for (const [user,pass] of db.query("SELECT user,pass FROM users"))
   console.log(user, pass);
