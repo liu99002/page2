@@ -1,6 +1,7 @@
 import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 import * as address from './address.js'
 import { DB } from "https://deno.land/x/sqlite/mod.ts";
+import { Session } from "https://deno.land/x/oak_sessions/mod.ts";
 
 const db = new DB("blog.db");
 db.query("CREATE TABLE IF NOT EXISTS Users (id INTEGER PRIMARY KEY AUTOINCREMENT, account TEXT, password TEXT)");
@@ -76,7 +77,8 @@ async function login(ctx){
         let password = post["password"]
         if (account in post1){
             if (post1[account]==password){
-              ctx.response.body=await address.loginsuccessful(account);
+              await ctx.state.session.set('user', user)
+              ctx.response.body=await address.loginsuccessful(account,ctx.state.session);
             }
             else{
               ctx.response.body=await address.loginerror(account);

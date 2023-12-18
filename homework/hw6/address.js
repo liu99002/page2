@@ -110,10 +110,11 @@ export function notyet() {
     `)
 }
 
-export function loginsuccessful() {
+export function loginsuccessful(account,user) {
     return layout('Loginsuccessful',`
         <form>
             <h1>登入成功</h1>
+            <h2>歡迎${user}登入</h2>
             <p><a href="/user/registerui">帳號註冊</a></p>
             <p><a href="/">首頁</a></p>
         </form>
