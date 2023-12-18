@@ -12,9 +12,11 @@ router
     .get('/user/registerui', registerUI)
     .get('/user/loginui', loginUI)
     .post('/user/register', register)
-    .post('/user/login', login);
+    .post('/user/login', login)
+    .get("/user/logout",logout)
 
 const app=new Application();
+app.use(Session.initMiddleware())
 app.use(router.routes());
 app.use(router.allowedMethods());
 function query(sql) {
@@ -77,8 +79,8 @@ async function login(ctx){
         let password = post["password"]
         if (account in post1){
             if (post1[account]==password){
-              await ctx.state.session.set('user', user)
-              ctx.response.body=await address.loginsuccessful(account,ctx.state.session);
+              await ctx.state.session.set('user', account)
+              ctx.response.body=await address.loginsuccessful(await ctx.state.session.get('user'));
             }
             else{
               ctx.response.body=await address.loginerror(account);
@@ -88,6 +90,11 @@ async function login(ctx){
           ctx.response.body=await address.notyet(account);
         }
     }
+}
+
+async function logout(ctx) {
+    await ctx.state.session.set('user', null)
+    ctx.response.body=await address.list();
 }
 
 let port = parseInt(Deno.args[0])
