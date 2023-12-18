@@ -8,7 +8,12 @@ const router = new Router();
 router
     .get("/", (ctx) => {
         ctx.response.type = 'text/html'
-        ctx.response.body = `<p><a href="/public/">開始</a></p>`
+        ctx.response.body = `
+        <form>
+            <link rel="stylesheet" href="public/style.css">
+            <p><a href="/public/">開始</a></p>
+        </form>
+        `
     })
     .get("/public/(.*)", async (ctx) => {
         let wpath = ctx.params[0]

@@ -27,6 +27,7 @@ async function add(ctx) {
 }
 async function show(ctx) {
     const pid = ctx.params.id;
+    console.log(ctx.params)
     let posts = query(`SELECT id, title, body FROM Numbers WHERE id=${pid}`)
     let post = posts[0]
     if (!post) ctx.throw(404, 'invalid post id');
