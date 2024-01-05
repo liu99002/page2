@@ -83,6 +83,7 @@ async function login(ctx){
 		if (account in post1){
 			if (post1[account]==password){
 				await ctx.state.session.set('user', account)
+				console.log('session.user=', await ctx.state.session.get('user'))
 				ctx.render("view/loginsuccessful.ejs",{account});
 			}
 			else{
