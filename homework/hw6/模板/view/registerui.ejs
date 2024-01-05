@@ -1,0 +1,9 @@
+<%- include('header.ejs') %>
+    <form action="/user/register" method="post">
+        <h1>帳號註冊</h1>
+        <input name="account" type="text" placeholder="帳號"><br>
+        <input name="password" type="text" placeholder="設定密碼"><br>
+        <input name="email" type="text" placeholder="電子信箱"><br>
+        <input type="submit" value="註冊">
+    </form>
+<%- include('footer.ejs') %>
