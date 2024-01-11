@@ -1,0 +1,67 @@
+@charset "UTF-8";
+html {
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%; /* 使 body 和 html 高度佔滿視窗 */
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    height: 100%; /* 使 body 高度佔滿視窗 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    box-shadow: gray 10px 10px 10px 10px;
+    border: 6px solid rgba(0, 0, 0, 0.128);
+    border-width: 50%;
+    border-radius: 12px;
+    font-size: larger;
+    background-color: rgba(0, 0, 0, 0.128);
+}
+
+form.home {
+    position: absolute;
+    top: 70px; /* 距離頂部的距離 */
+    left: 50px; /* 距離左側的距離 */
+    height: 350px;
+    width: 420px;
+    box-shadow: gray 10px 10px 10px 10px;
+    border: 6px solid rgba(0, 0, 0, 0.128);
+    border-width: 50%;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.128);
+}
+
+form.home h1{
+    margin: 25px 50px; /* 調整標題之間的間距 */
+    font-size: 55px;
+}
+
+form.home h2 {
+    font-size: 35px;
+    text-align: center; /* 文字置中 */
+    margin: 8px 90px;
+    padding: 12px 20px;
+    border: 3px solid rgba(0, 0, 0, 0.623);
+    border-radius: 4px;
+    background-color: whitesmoke;
+    height: 50px;
+    width: 180px;
+}
+
+input{
+    margin: 8px 90px;
+    padding: 12px 20px;
+    border: 3px solid rgba(0, 0, 0, 0.623);
+    border-radius: 4px;
+    background-color: whitesmoke;
+    height: 80px;
+    width: 225px;
+    font-size: 35px;
+}

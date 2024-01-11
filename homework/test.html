@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <button onclick="showAlert()">Click Me</button>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+        <script>
+            const showAlert = () => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Hi',
+                    text: 'Thanks for coming!',
+                })
+            }
+        </script>
+    </body>
+</html>

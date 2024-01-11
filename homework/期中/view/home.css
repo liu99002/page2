@@ -1,0 +1,135 @@
+@charset "UTF-8";
+html{
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+
+form.home{
+    width: 400px;
+    border: 6px solid rgba(0, 0, 0, 0.128)  ;
+    border-width: 50%;
+    border-radius: 12px;
+    font-size: larger;
+    background-color: rgba(0, 0, 0, 0.128)  ;
+    margin: 350px 800px;
+}
+
+form.login{
+    width: 400px;
+    border: 6px solid rgba(0, 0, 0, 0.128)  ;
+    border-width: 50%;
+    border-radius: 12px;
+    font-size: larger;
+    background-color: rgba(0, 0, 0, 0.128)  ;
+    margin: 300px 800px;
+}
+
+form.register{
+    width: 400px;
+    border: 6px solid rgba(0, 0, 0, 0.128)  ;
+    border-width: 50%;
+    border-radius: 12px;
+    font-size: larger;
+    background-color: rgba(0, 0, 0, 0.128)  ;
+    margin: 280px 800px;
+}
+
+input{
+    margin: 8px 0;
+    padding: 12px 20px;
+    border: 3px solid rgba(0, 0, 0, 0.623);
+    border-radius: 4px;
+    background-color: whitesmoke;
+    text-align: center;
+    font-family: "Lucida Handwriting",Cursive;
+    font-style: italic;
+}
+
+input:focus{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+form.login,form.home,form.register{
+    text-align: center;
+    font-family: "Lucida Handwriting",Cursive;
+    font-style: italic;
+}
+
+h1{
+    font-size: 35px;
+}
+
+.table{
+    width:640px;
+    border-collapse:collapse;
+    height: 60%;
+}
+.table td{border:1px solid #cccccc; color:#555555;text-align:center;line-height:28px;}
+.title{ background-color:#0066cc;}
+.title td{ color:#ffffff; text-align:center;}
+.one,.two,.three,.four,.five{background-color:#ffffff;}
+.one,.two,.three,.four,.five{background-color:#ffffff;}
+.sexyborder{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 35px; /* 增加內邊距 */
+    background-color: rgba(0, 0, 0, 0.128);
+    border: 6px solid rgba(0, 0, 0, 0.128);
+    border-width: 50%;
+    border-radius: 12px;
+    width: 650px;
+    margin: 0 640px;
+}
+.title, .one, .two, .three, .four, .five {
+text-align: center; /* 文字居中 */
+font-size: 35px; /* 設置字體大小 */
+}
+
+h4.rank{
+    font-size: 90px;
+    margin: 0px 770px;
+    width: 100%;
+}
+
+.alert-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.alert-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.alert-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+h1#return-game {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+h1#logout-game {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
